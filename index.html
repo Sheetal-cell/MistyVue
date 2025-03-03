@@ -3,43 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: linear-gradient(to right, #4facfe, #00f2fe);
-            color: white;
-            padding: 20px;
-        }
-        .container {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        input {
-            width: 80%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-        }
-        button {
-            padding: 10px;
-            margin-top: 10px;
-            background: #ff9800;
-            border: none;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        #weather {
-            margin-top: 20px;
-            font-size: 18px;
-        }
-    </style>
+    
 </head>
 <body>
     <div class="container">
@@ -49,38 +15,6 @@
         <div id="weather"></div>
     </div>
 
-    <script>
-        async function getWeather() {
-            const city = document.getElementById("city").value;
-            const apiKey = "c8304b20864268d0268f32cc5ae8dd5f";
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-        
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-                console.log("API Response:", data); // Debugging
-        
-                if (data.cod === 200) {
-                    const weatherIcon = data.weather[0].icon;
-                    console.log("Weather Icon Code:", weatherIcon); // Debugging
-        
-                    document.getElementById("weather").innerHTML = `
-                        <h3>${data.name}, ${data.sys.country}</h3>
-                        <p>Temperature: ${data.main.temp}°C</p>
-                        <p>Weather: ${data.weather[0].description}</p>
-                        <img src="https://openweathermap.org/img/wn/${weatherIcon}@2x.png?random=${Math.random()}" 
-                             alt="Weather Icon" 
-                             onerror="this.onerror=null; this.src='fallback-image.png';">
-                    `;
-                } else {
-                    document.getElementById("weather").innerHTML = `<p>${data.message}</p>`;
-                }
-            } catch (error) {
-                console.error("Error fetching weather data:", error);
-                document.getElementById("weather").innerHTML = `<p>Error fetching data.</p>`;
-            }
-        }
-        
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
