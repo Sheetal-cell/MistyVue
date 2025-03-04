@@ -1,3 +1,15 @@
+function updateDateTime() {
+    const now = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+    document.getElementById("datetime").textContent = now.toLocaleDateString('en-US', options);
+}
+
+// Call the function on page load
+updateDateTime();
+
+// Update the time every 60 seconds
+setInterval(updateDateTime, 60000);
+
 async function getWeather() {
     const city = document.getElementById("city").value;
     const apiKey = "c8304b20864268d0268f32cc5ae8dd5f";

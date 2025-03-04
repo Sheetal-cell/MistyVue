@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.webp" type="image/x-icon">
+    <link rel="icon" href="assets/logo.webp" type="image/png">
     <title>Weather App</title>
     
 </head>
 <body>
+    <img src="assets/logo.webp" alt="MistyVue Logo" class="logo">
+
+
     <div class="container">
+        <p id="datetime"></p>
+
         <h2>Weather App</h2>
         <input type="text" id="city" placeholder="Enter city name">
         <button onclick="getWeather()">Get Weather</button>

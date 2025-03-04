@@ -1,34 +1,117 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     background: linear-gradient(to right, #4facfe, #00f2fe);
     color: white;
     padding: 20px;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* Logo Styling */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+/* Container Box */
 .container {
     max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
 }
+
+/* Hover effect */
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Input Field */
 input {
     width: 80%;
-    padding: 10px;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: 0.3s;
 }
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Button Styling */
 button {
-    padding: 10px;
-    margin-top: 10px;
+    width: 85%;
+    padding: 12px;
+    margin-top: 15px;
     background: #ff9800;
     border: none;
     color: white;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
+    transition: 0.3s;
 }
+
+button:hover {
+    background: #ff7b00;
+    transform: scale(1.05);
+}
+
+/* Weather Info */
 #weather {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Weather Icon */
+#weather img {
+    width: 100px;
+    margin-top: 10px;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        max-width: 90%;
+    }
+
+    input, button {
+        width: 100%;
+    }
+
+    .logo {
+        width: 100px;
+    }
+}
+#datetime {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
 }
