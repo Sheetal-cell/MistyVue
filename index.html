@@ -6,22 +6,41 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/logo.webp" type="image/x-icon">
     <link rel="icon" href="assets/logo.webp" type="image/png">
-    <title>Weather App</title>
+    <title>MistyVue: Weather Snap</title>
     
 </head>
 <body>
     <img src="assets/logo.webp" alt="MistyVue Logo" class="logo">
-
+    <div class="sun"></div> <!-- Sun -->
+    <div class="cloud">
+        <div class="droplet"></div>
+        <div class="droplet"></div>
+        <div class="droplet"></div>
+        <div class="droplet"></div>
+        <div class="droplet"></div>
+        <div class="droplet"></div>
+        <div class="droplet"></div>
+        <div class="droplet"></div>
+        <div class="droplet"></div>
+        <div class="droplet"></div>
+    </div> <!-- Cloud -->
+    <!-- Wind Effects -->
+    <div class="wind"></div>
+    <div class="wind"></div>
+    <div class="wind"></div>
+    
 
     <div class="container">
         <p id="datetime"></p>
 
-        <h2>Weather App</h2>
+        <h2> MistyVue: Weather Snap</h2>
         <input type="text" id="city" placeholder="Enter city name">
         <button onclick="getWeather()">Get Weather</button>
         <div id="weather"></div>
     </div>
 
     <script src="script.js"></script>
+    
 </body>
+<footer>👉🏻Made by: Sheetal Bajaj🙂🤞</footer>
 </html>
