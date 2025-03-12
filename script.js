@@ -12,7 +12,7 @@ setInterval(updateDateTime, 60000);
 
 async function getWeather() {
     const city = document.getElementById("city").value;
-    const apiKey = "c8304b20864268d0268f32cc5ae8dd5f";
+    const apiKey = "----";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     try {
